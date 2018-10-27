@@ -27,7 +27,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  return [a * b, 'The sum of' + a + ' and ' + b + ' is ' + (a * b) + '.']
+  return [a * b, 'The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.']
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -96,12 +96,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+// 
 function multiplyArray(multArr) { //eslint-disable-line
+  var mul1 = 1
+  for (var i = 0; i < testArray.length; i++) {
+    mul1 = multiply(mul1, testArray[i])[0];
+  }
+  return [mul1,'The numbers ' + testArray[0] +','+ testArray[1] +','+ testArray[2] + ' have a product of ' + mul1 + '.'];
 
 }
-
+console.log(multiplyArray(testArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
